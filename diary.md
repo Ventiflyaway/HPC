@@ -12,3 +12,8 @@
 ### 26/8/14：
 - HW1 environment setup
 - 用Ubuntu+WSL环境，cmake version 3.28.3
+
+### 26/8/25：
+- lesson 3 of CS267
+    - RMM(Recursive Matrix Mutiply)  - 最少搬运数据：O( n^3 / 根号(Mfast))
+    - roofline model:upper bound of performance
