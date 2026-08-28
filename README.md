@@ -11,5 +11,5 @@ repository structure:
 - `diary.md` for everyday progress recording
 - `CS267.md` for course notes
 
-HPC = 并行编程（Parallel Programming） + 计算机体系结构（architecture） + performance optimization + 数值/科学计算 + 大规模计算系统
+HPC = 并行编程（Parallel Programming） + 计算机体系结构（architecture） + performance optimization + 数值/科学计算 + 大规模计算系统  
 HPC = 高性能的algorithm + 高性能的SW + 高性能的HW
