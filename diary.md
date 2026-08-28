@@ -24,24 +24,17 @@
 1 好像可以和CSC4140 computer graphics结合起来！
 
 #### 26/8/27-28：
-- lesson 4 of CS267
+- lesson 4 of CS267: 大致了解了OpenMP的用法，后续作业实战真正练手看掌握程度！
     - OpenMP:一套共享内存并行编程标准/API
     - (1) parallel: 会遇到的问题 true and false sharing（解决：pad/synchronizing）
 ``` bash
-High level synchronization:
-- critical
-- barrier
-- atomic：make the read/update of a memory location atomic
-- ordered  
-Low level synchronization
-- flush: enforces a consistent view of memory.每个thread各自更新内存view，不相互等待
-- locks (both simple and nested)
+High level synchronization: critical/ barrier/ atomic/ ordered  
+Low level synchronization: flush/ locks (both simple and nested)
 ```
     - (2) parallel loop: 
 ```bash
 - loop worksharing ：`#pragma omp for/#pragma omp parallel for`自动分workload
 - schedule:静态/动态（一个个拿workload，处理完接着拿；需要动态schedule的情况：工作量不均匀）
-- 
 ```
     - (3) data sharing: 
 ```bash
