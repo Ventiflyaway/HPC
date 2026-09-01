@@ -13,6 +13,7 @@
 - HW1 environment setup
 - 用Ubuntu+WSL环境，cmake version 3.28.3
 
+## week 2:
 ### 26/8/25：
 - lesson 3 of CS267
     - RMM(Recursive Matrix Mutiply)  - 最少搬运数据：O( n^3 / 根号(Mfast))
@@ -42,5 +43,11 @@ Low level synchronization: flush/ locks (both simple and nested)
 - reduction
 - task、single
 ```
-
+## week 3:
+#### 26/9/1:
+- lesson 5 of CS267: simulation的4种分类
+    - discrete event
+    - particle systems
+    - lumped variables depending on continuous parameters: ODE（Star Wars: The Force Unleashed）,spice curcuit
+    - continunous variables depending on continuous parameters: PDE, heat（Terminator 3: Rise of the Machines）
 
