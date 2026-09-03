@@ -50,4 +50,8 @@ Low level synchronization: flush/ locks (both simple and nested)
     - particle systems
     - lumped variables depending on continuous parameters: ODE（Star Wars: The Force Unleashed）,spice curcuit
     - continunous variables depending on continuous parameters: PDE, heat（Terminator 3: Rise of the Machines）
+如何把现实中的连续物理问题（尤其是 PDE）离散成 mesh/grid 上的计算
 
+#### 26/9/3:
+- lesson 6 of CS267：从n-body到3D到general，讲解通过 tiling/blocking 最大化数据复用
+（其实lesson 5、6的公式看的不甚明白，需要复习）
