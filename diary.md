@@ -63,3 +63,14 @@ Low level synchronization: flush/ locks (both simple and nested)
 
 #### 26/9/7:
 - lesson 7 of CS267: GPU & CUDA!终于！
+```
+1. GPUs gain efficiency from simpler cores and more parallelism
+  - Very wide SIMD (SIMT) for parallel arithmetic and latency-hiding
+2. Heterogeneous（异构的） programming with manual offload:CPU to run OS, etc. GPU for compute 
+  - 一个系统里使用不同类型的处理器，让它们各自做擅长的工作
+3. GPU 想获得高性能，需要大量并行任务，而且主要是 data parallelism
+  - Not as strict as CPU-SIMD，因为=>
+  - 1. divergent addresses：不同 thread 可以访问不同地址
+  - 2. instructions：不同 thread 也可以走不同分支
+4. 同一个 Block 里的 threads 可以共享高速的 shared memory，并且可以用 barrier 同步；同一个 kernel 的不同 Blocks 之间，通常只能通过较慢的 device/global memory 共享数据，并通过 atomic operations 来协调。
+```
