@@ -55,3 +55,11 @@ Low level synchronization: flush/ locks (both simple and nested)
 #### 26/9/3:
 - lesson 6 of CS267：从n-body到3D到general，讲解通过 tiling/blocking 最大化数据复用
 （其实lesson 5、6的公式看的不甚明白，需要复习）
+
+#### 26/9/6：
+- 收尾HW1：在研究avl的时候，对比了rvv可能的写法：
+    - RVV scalable vector 最漂亮的地方之一：tail 可以通过改变 VL 自然处理，不一定需要现在的cleanup（ 8 → 4 → scalar ）
+- 需要一个完整的writeup
+
+#### 26/9/7:
+- lesson 7 of CS267: GPU & CUDA!终于！
