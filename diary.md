@@ -74,3 +74,11 @@ Low level synchronization: flush/ locks (both simple and nested)
   - 2. instructions：不同 thread 也可以走不同分支
 4. 同一个 Block 里的 threads 可以共享高速的 shared memory，并且可以用 barrier 同步；同一个 kernel 的不同 Blocks 之间，通常只能通过较慢的 device/global memory 共享数据，并通过 atomic operations 来协调。
 ```
+
+#### 26/9/13： lec 8 data parallel algorithms
+prefix parallel，好多算法，还要分析时间复杂度，好复杂！！
+
+## week 4：
+#### 26/9/15： lec 9 distributed mem architecture & intro of MPI
+- OpenMP：大家共享同一块内存，用于一台机器里的多个 CPU cores 
+- MPI：每个人有自己的内存，多台机器 / 多个计算节点
