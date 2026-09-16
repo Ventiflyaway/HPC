@@ -82,3 +82,11 @@ prefix parallel，好多算法，还要分析时间复杂度，好复杂！！
 #### 26/9/15： lec 9 distributed mem architecture & intro of MPI
 - OpenMP：大家共享同一块内存，用于一台机器里的多个 CPU cores 
 - MPI：每个人有自己的内存，多台机器 / 多个计算节点
+
+#### 26/9/16: lec 10
+- 常见的collective operations，算法（ring，recursive doubling等）
+- SUMMA（数据分散存储⇒通信拿数据⇒本地计算）：给每行每列 processor 建一个 communicator
+- MPI + threads
+- one-sided communication:每个processor中的一部分(window) mem设置成remotely accessible
+    - Put/Get有race condition
+    - 老师比较喜欢passive model：有Lock和unLock。window 是“哪块内存可以被远程访问”，epoch 是“什么时候允许访问这块内存”（即lock和unlock之间的时间）
