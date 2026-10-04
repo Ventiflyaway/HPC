@@ -90,3 +90,16 @@ prefix parallel，好多算法，还要分析时间复杂度，好复杂！！
 - one-sided communication:每个processor中的一部分(window) mem设置成remotely accessible
     - Put/Get有race condition
     - 老师比较喜欢passive model：有Lock和unLock。window 是“哪块内存可以被远程访问”，epoch 是“什么时候允许访问这块内存”（即lock和unlock之间的时间）
+
+## week 5：
+#### 26/10/4“ Lec 11 UPC++
+- UPC++ 是基于 PGAS 的 C++ 并行编程库
+    - 传统 shared memory 编程方便，但容易有 race condition，而且 locality 和 scalability 较差。
+    - 传统 message passing（如 MPI send/recv）可扩展性好，但需要显式匹配 send/receive，软件和数据打包开销较大。
+    - PGAS = Partitioned Global Address Space：程序员看到的是 global address space，但数据有 local / remote 之分；希望同时获得共享内存的便利性和消息传递的 locality / scalability
+- UPC++ 强调异步通信，常用 future、wait()、.then()、when_all() 来隐藏远程访问延迟，并把通信与计算重叠
+- 核心通信方式包括 RMA 和 RPC：
+    - RMA 用 rget/rput 直接访问远程内存 move data to computation
+    - RPC 则让远程 rank 执行函数，把计算移动到数据所在处
+- 同步与 collective 操作包括 barrier、broadcast、reduce_all
+- dist_object 用来保存每个 rank 各自的一份分布式状态，而分布式哈希表等更复杂数据结构可结合 dist_object + RPC 实现
